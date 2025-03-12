@@ -1,0 +1,120 @@
+.fa-brands,
+.bx,
+.fa-snowflake,
+.fa-caret-up {
+  font-size: 300%;
+  animation: color-change 2s ease-in-out infinite;
+  animation-delay: calc(var(--order) * 400ms);
+}
+
+.fa-github {
+  color: #434ba0;
+}
+.bxl-kubernetes {
+  color: #316ce6;
+  animation: kubRotate 2s ease-in-out infinite;
+  animation-delay: calc(var(--order) * 400ms);
+}
+.fa-linkedin {
+  color: rgb(20, 77, 163);
+}
+.fa-docker {
+  color: #039bfb;
+}
+.fa-snowflake {
+  color: rgb(123, 183, 231);
+  animation: 2s flakeRotate ease-in-out infinite;
+  animation-delay: calc(var(--order) * 400ms);
+}
+.fa-css3-alt {
+  color: rgb(123, 183, 231);
+}
+.fa-react {
+  color: rgb(130, 173, 236);
+  animation: reactRotate 2s ease-in-out infinite;
+  animation-delay: calc(var(--order) * 300ms);
+}
+.fa-laravel {
+  color: rgba(233, 15, 15, 0.753);
+}
+.fa-php {
+  color: #7b7fb5;
+}
+.fa-js {
+  color: rgb(235, 195, 20);
+}
+.fa-git-alt {
+  color: #e94f32;
+}
+
+@keyframes color-change {
+  0%,
+  100% {
+    opacity: 0.5;
+    filter: brightness(0.7);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.1);
+  }
+}
+
+@keyframes kubRotate {
+  0%,
+  100% {
+    opacity: 0.5;
+    filter: brightness(0.7);
+    transform: rotateZ(0deg);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.1);
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes reactRotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    filter: brightness(1.1);
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes flakeRotate {
+  0%,
+  100% {
+    opacity: 0.5;
+    filter: brightness(0.7);
+    transform: rotateX(0deg);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.1);
+    transform: rotateX(180deg);
+  }
+}
+
+.fa-brands:hover,
+.bx:hover,
+.fa-snowflake:hover,
+.fa-caret-up:hover {
+}
+
+.fa-react:hover {
+  color: inherit;
+  position: relative;
+  animation: hoveredIcon 2s ease;
+}
+
+@keyframes hoveredIcon {
+  from {
+    bottom: inherit;
+    transform: rotateZ(0deg);
+  }
+  to {
+    bottom: 5px;
+  }
+}

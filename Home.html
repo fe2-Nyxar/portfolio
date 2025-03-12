@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="home.js" defer></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="icons.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="cards.css" />
+    <link href="https://cdnjs" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div id="topPage"></div>
+    <a id="up" href="#topPage" style="animation: reversefadeIn 0s forwards"
+      ><i class="fa-solid fa-caret-up"></i
+    ></a>
+    <header>
+      <a id="logo">Portfolio</a>
+      <ul id="bar">
+        <a href="#about"><li>About</li></a>
+        <a href="#skills"><li>skills</li></a>
+        <a href="#projects"><li>projects</li></a>
+        <a href="#socials"><li>socials</li></a>
+        <button class="button" id="themeBtn" onclick="toggleTheme();">
+          <i class="fa-solid"></i>
+        </button>
+      </ul>
+    </header>
+    <main>
+      <section id="home">
+        <h1 id="welcome">Hi, Welcome to my portfolio</h1>
+      </section>
+      <section class="section" id="about">
+        <h1 class="h1">About Me</h1>
+        <p>
+          My name is Abderrahemane Drissi, i'm a fullstack developer who likes
+          to experiment and get outside of my comfort zone, trying new
+          technologies and challenging myself :) Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. Voluptates rem, repudiandae vel
+          assumenda quam ex explicabo debitis dolorem aperiam laboriosam magni.
+          Quidem itaque facilis cupiditate, tempora totam corporis quos alias?
+        </p>
+      </section>
+      <section class="section" id="skills">
+        <h1 class="h1">
+          I have wide variaty of skills i'm proud of mainly because i'm used to
+          go out of my way to try new stuff like:
+        </h1>
+        <br />
+        <div class="skills" id="proglang">
+          <h1 class="h1">programming languages:</h1>
+          <ul>
+            <li title="nix">
+              <i class="fa-regular fa-snowflake" style="--order: 1"></i>
+            </li>
+            <li title="javascript">
+              <i class="fa-brands fa-js" style="--order: 2"></i>
+            </li>
+            <li title="php">
+              <i class="fa-brands fa-php" style="--order: 3"></i>
+            </li>
+            <li title="css">
+              <i class="fa-brands fa-css3-alt" style="--order: 4"></i>
+            </li>
+            <li title="lua">lua</li>
+          </ul>
+        </div>
+        <div class="skills" id="frameworks">
+          <h1 class="h1">frameworks:</h1>
+          <ul>
+            <li title="react">
+              <i class="fa-brands fa-react" style="--order: 1"></i>
+            </li>
+            <li title="laravel">
+              <i class="fa-brands fa-laravel" style="--order: 2"></i>
+            </li>
+            <li title="expressJs">expressJs</li>
+          </ul>
+        </div>
+        <div class="skills" id="others">
+          <h1 class="h1">others:</h1>
+          <ul>
+            <li title="kubernetes">
+              <i class="bx bxl-kubernetes" style="--order: 1"></i>
+            </li>
+            <li title="linux">
+              <i class="fa-brands fa-linux" style="--order: 2"></i>
+            </li>
+            <li title="git">
+              <i class="fa-brands fa-git-alt" style="--order: 3"></i>
+            </li>
+            <li title="docker">
+              <i class="fa-brands fa-docker" style="--order: 4"></i>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section" id="projects">
+        <h1 class="h1">projects:</h1>
+        <div class="cardContainer">
+          <div class="card">
+            <h2 class="title">
+              <a
+                class="a"
+                href="https://github.com/fe2-Nyxar/WebScrapper---Altissia"
+                >Web Scraper for Fetching Exercise Data and Completing Tasks
+                with OpenAI LLM</a
+              >
+            </h2>
+            <p class="content">
+              The project involves building a web scraper that interacts with an
+              online exercise platform to fetch exercise data. This scraper will
+              then send an HTTP request to an OpenAI Large Language Model (LLM)
+              to process and respond to the exercise. Once the model returns the
+              response, the scraper will complete the exercise accordingly.
+            </p>
+          </div>
+          <div class="card">
+            <h2 class="title">
+              Car Tracking System for Centralized Data and Performance Analytics
+            </h2>
+            <p class="content">
+              This project aims to build a car tracking system for a company
+              that allows for centralized data collection and performance
+              analysis. The goal is to monitor vehicles in real-time, collect
+              data on their performance, and use that information to generate
+              insightful statistics that can help optimize operations and
+              maintenance.
+            </p>
+          </div>
+          <div class="card">
+            <h2 class="title">Online IDE for Coding and Development</h2>
+            <p class="content">
+              An online IDE in the browser allows users to write, edit, compile,
+              and execute code entirely within a web browser, without the need
+              to install or configure any software locally.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="foot" id="socials">
+        <h1 class="h1">Contact Me:</h1>
+        <br /><br />
+        <div>
+          <a href="https://www.linkedin.com/">
+            <i
+              class="fa-brands fa-linkedin"
+              style="--order: 1; cursor: pointer; padding: 2%"
+            ></i
+          ></a>
+          <a href="https://github.com/fe2-nyxar"
+            ><i
+              class="fa-brands fa-github"
+              style="--order: 2; cursor: pointer"
+            ></i
+          ></a>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

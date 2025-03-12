@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+
+:root {
+  --bg-color: #060c20;
+  --text-color: whitesmoke;
+  --border-color: #fff;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  color: var(--text-color);
+  background: rgb(235, 71, 106, 0.8);
+}
+
+[data-theme="light"] {
+  --bg-color: #f5f5f5;
+  --text-color: #060606;
+  --border-color: #060606;
+}
+
+* {
+  all: unset;
+  font-family: system-ui;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.25s ease-in-out,
+    color 0.25s ease-in-out;
+}
+
+/*------ Main -------*/
+main {
+  display: grid;
+  grid-template-columns: 1fr; /* Creates 3 equal-width columns */
+  grid-template-rows: repeat(3, 1fr);
+}
+#home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    rgba(22, 40, 102, 0.6),
+    rgba(109, 33, 58, 0.2)
+  );
+  z-index: -1;
+}
+#home {
+  background-image: url("./assets/space-digital.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+#welcome {
+  font-family: "Press Start 2P", monospace;
+  font-size: 1.5em;
+  position: relative;
+  border-right: 0.15em solid;
+  letter-spacing: 0.15em;
+  animation: blink-line 0.75s step-end infinite;
+  align-self: center;
+  left: 15%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+@keyframes blink-line {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(235, 71, 106);
+  }
+}
+
+.section {
+  border: 2px black solid;
+  border-radius: 6%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 3%;
+  margin: 2%;
+}
+.h1 {
+  font-weight: 800;
+  font-size: 1.5rem;
+  display: block;
+  &::first-letter {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+}
+p {
+  font-size: 22px;
+}
+
+.h1 {
+  font-size: 300;
+  font-weight: bold;
+  font: normal;
+}
+#up {
+  position: fixed;
+  top: 87vh;
+  left: 92vw;
+  border-radius: 35%;
+  padding: 1.1%;
+  background-color: rgb(235, 71, 106, 0.5);
+  z-index: 1000;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes reversefadeIn {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#proglang ul,
+#others ul,
+#frameworks ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#proglang ul li,
+#others ul li,
+#frameworks ul li {
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.a {
+  text-decoration: rgb(220, 20, 60, 0.6) underline;
+  color: rgb(220, 20, 60, 0.6);
+  cursor: pointer;
+}
+.a:hover {
+  text-decoration: rgb(220, 20, 60, 0.6) underline;
+  color: rgb(220, 20, 60, 0.6);
+}
