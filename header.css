@@ -29,22 +29,28 @@ header {
 
   cursor: pointer;
 }
+#bar a {
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 5px;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+#bar a:hover {
+  animation: barItem 400ms ease forwards;
+}
+
 @keyframes barItem {
-  from {
+  0% {
     font-weight: normal;
+    border-bottom: 0px rgb(247, 81, 108) solid;
   }
   100% {
     color: rgb(247, 81, 108);
     font-weight: 500;
     border-bottom: 3px rgb(247, 81, 108) solid;
   }
-}
-#bar a {
-  cursor: pointer;
-  font-size: 1.5rem;
-}
-#bar a:hover {
-  animation: barItem 150ms ease-in-out forwards;
 }
 
 #logo {

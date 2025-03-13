@@ -23,14 +23,32 @@ document.addEventListener("DOMContentLoaded", () => {
   applyTheme(defaultTheme, defaultIcon);
 });
 
-document.addEventListener("scroll", () => {
-  console.log(window.scrollY);
+function goTotopPage(scrollY) {
   let upbtn = document.getElementById("up");
-  let goToTopVisible = window.scrollY >= 700 ? "visible" : "hidden";
+  let goToTopVisible = scrollY >= 700 ? "visible" : "hidden";
   /*   upbtn.style.visibility = goToTopVisible; */
   if (goToTopVisible === "hidden") {
     upbtn.style.animation = "reversefadeIn 0.7s forwards";
   } else {
     upbtn.style.animation = "fadeIn 0.7s forwards";
   }
+}
+
+function cardsOnScreen(scrollY) {
+  let isItvisible = scrollY >= 1396.68 ? "visible" : "hidden";
+  let cards = document.querySelectorAll(".card");
+  if (isItvisible === "visible") {
+    for (i = 0; i < cards.length; i++) {
+      cards[i].style.animation = "appearCards 2s ease";
+    }
+  } else if (isItvisible === "hidden") {
+    for (i = 0; i < cards.length; i++) {
+      cards[i].style.animation = "none";
+    }
+  }
+}
+document.addEventListener("scroll", () => {
+  console.log(scrollY);
+  goTotopPage(scrollY);
+  cardsOnScreen(scrollY);
 });

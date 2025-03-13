@@ -5,12 +5,14 @@
   --bg-color: #060c20;
   --text-color: whitesmoke;
   --border-color: #fff;
+  --selection-bg-color: rgb(235, 71, 106, 0.8);
   scroll-behavior: smooth;
 }
 
 ::selection {
   color: var(--text-color);
-  background: rgb(235, 71, 106, 0.8);
+  background: var(--selection-bg-color);
+  filter: brightness(6);
 }
 
 [data-theme="light"] {
@@ -62,19 +64,32 @@ main {
 
 #welcome {
   font-family: "Press Start 2P", monospace;
-  font-size: 1.5em;
+  font-size: 1.6em;
+  font-weight: bold;
   position: relative;
   border-right: 0.15em solid;
   letter-spacing: 0.15em;
-  animation: blink-line 0.75s step-end infinite;
   align-self: center;
   left: 15%;
   background-color: var(--bg-color);
   color: var(--text-color);
-
   transition:
     background-color 0.2s ease-in-out,
     color 0.2s ease-in-out;
+  overflow: hidden;
+  white-space: nowrap;
+  animation:
+    typingAnimation 2.5s steps(31) forwards,
+    blink-line 0.75s step-end infinite;
+}
+
+@keyframes typingAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 31ch;
+  }
 }
 
 @keyframes blink-line {
@@ -88,18 +103,18 @@ main {
 }
 
 .section {
-  border: 2px black solid;
-  border-radius: 6%;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  padding: 3%;
   margin: 2%;
+  padding: 1%;
+  scroll-margin-top: 5em;
+  border-bottom: 2px solid var(--text-color); /* Border right under the text */
+  padding-bottom: 5px;
 }
 .h1 {
   font-weight: 800;
   font-size: 1.5rem;
   display: block;
   &::first-letter {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
   }
 }
@@ -107,11 +122,6 @@ p {
   font-size: 22px;
 }
 
-.h1 {
-  font-size: 300;
-  font-weight: bold;
-  font: normal;
-}
 #up {
   position: fixed;
   top: 87vh;
@@ -163,4 +173,29 @@ p {
 .a:hover {
   text-decoration: rgb(220, 20, 60, 0.6) underline;
   color: rgb(220, 20, 60, 0.6);
+}
+
+.about-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: var(--text-color);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  color: var(--text-color);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.about-heading,
+#proglang .h1,
+#others .h1,
+#frameworks .h1 {
+  display: flex;
+  justify-content: center;
+  margin: 3%;
 }
