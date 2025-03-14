@@ -1,5 +1,5 @@
 .fa-brands,
-.bx,
+.bxl-kubernetes,
 .fa-snowflake,
 .fa-caret-up {
   font-size: 300%;
@@ -117,4 +117,11 @@
   to {
     bottom: 5px;
   }
+}
+
+.bxs-star,
+.bxs-star-half,
+.bx-star {
+  color: var(--stars-color);
+  font-size: 1.5rem;
 }

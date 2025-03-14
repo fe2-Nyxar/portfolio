@@ -4,7 +4,7 @@
   justify-content: center;
 }
 .card {
-  border: 2px solid var(--border-color);
+  border: 6px solid var(--border-cards-color);
   border-radius: 7%;
   padding: 1.5%;
   margin: 1.5%;
@@ -15,7 +15,13 @@
   height: 60vh;
   animation-range: entry 0% cover 20%;
   box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.3);
+
+  & .tools:first-of-type {
+    padding: 5%;
+    text-align: center;
+  }
 }
+
 @keyframes appearCards {
   from {
     opacity: 0.3;
@@ -35,9 +41,13 @@
   font-size: 25;
   font-weight: 600;
   padding-bottom: 8px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 4px solid var(--border-cards-color);
   margin-top: 5px;
   margin-bottom: 15px;
+  & > a:first-of-type {
+    color: var(--border-cards-color);
+    text-decoration-color: var(--border-cards-color);
+  }
   & :hover {
     filter: brightness(3);
   }

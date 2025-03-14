@@ -35,7 +35,7 @@ function goTotopPage(scrollY) {
 }
 
 function cardsOnScreen(scrollY) {
-  let isItvisible = scrollY >= 1396.68 ? "visible" : "hidden";
+  let isItvisible = scrollY >= 1500.68 ? "visible" : "hidden";
   let cards = document.querySelectorAll(".card");
   if (isItvisible === "visible") {
     for (i = 0; i < cards.length; i++) {
